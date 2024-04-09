@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - TechShield Security Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="photos/logo.png" alt="Company Logo" id="company-logo">
+        <h1>TechShield Security Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="cart-button">Cart</button>
+
+    </header>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button id="close-cart-btn">X</button>
+        <!-- Cart items will be dynamically inserted here -->
+        <div id="cart-items"></div>
+        <button id="purchase-now">Purchase Now</button>
+    </div>
+    
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product" data-product-id="1">
+                <img src="photos/advanced-security-camera.jpg" alt="Advanced Security Camera">
+                <h3>Advanced Security Camera</h3>
+                <p>Capture every detail with our Advanced Security Camera, featuring 4K resolution, 
+                    night vision, and motion detection. Ideal for both indoor and outdoor use, it 
+                    provides round-the-clock surveillance to keep your premises secure.</p>
+                <span class="price">$199.99</span>
+                <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+            </div>
+            <div class="product" data-product-id="2">
+                <img src="photos/wireless-alarm-system.jpg" alt="Product 2">
+                <h3>Wireless Alarm System</h3>
+                <p>Enhance your home or business security with our Wireless Alarm System. 
+                    This comprehensive kit includes a central alarm hub, door/window sensors, 
+                    motion detectors, and a remote control, offering a fully integrated security 
+                    solution without the hassle of wiring.</p>
+                <span class="price">$249.99</span>
+                <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+            </div>
+            <div class="product" data-product-id="3">
+                <img src="photos/camera-mounts.jpg" alt="Product 3">
+                <h3>Camera Mounts</h3>
+                <p>Secure your surveillance cameras with our durable and versatile camera mounts. 
+                    Designed for easy installation and adjustment, these mounts ensure optimal 
+                    positioning for your security cameras, providing comprehensive coverage of your 
+                    property.</p>
+                    <span class="price">$29.99</span>
+                    <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/yourchannel" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    
+            <!-- Copyright Notice -->
+            <p>&copy; <span id="current-year"></span> TechShield Security Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

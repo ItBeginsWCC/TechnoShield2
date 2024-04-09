@@ -1,0 +1,663 @@
+/* Resetting default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Full-page background image setup */
+#homepage-body {
+    background-image: url('photos/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This ensures the background is fixed during scroll */
+}
+
+#services-intro {
+    background-image: url('photos/servicesPage.png');
+    color: white;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    display: inline-block; /* Or 'block' depending on your layout */
+    padding: 20px; /* Adjust as necessary */
+    border-radius: 5px; /* Optional, for rounded corners */
+}
+
+
+
+
+/* Fixed header with shadow */
+header {
+    display: flex;
+    justify-content: space-between; /* Spreads content across the main axis */
+    align-items: center; /* Aligns items vertically in the center */
+    background-color: #fff;
+    padding: 10px 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.left-header {
+    display: flex;
+    align-items: center; /* Ensures the logo and title are aligned */
+}
+
+#company-logo {
+    height: 60px;
+    margin-right: 20px; /* Adds some space between the logo and the business name */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Navigation styling */
+nav {
+    flex-grow: 1; /* Allows the nav to grow and use available space */
+    display: flex;
+    justify-content: flex-end; /* Pushes the nav items to the right */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Cart button styling */
+#cart-button {
+    margin-left: 40px; /* Ensures some space between the navigation and the cart button */
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#close-cart-btn {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Adjust color to match your design */
+}
+
+
+/* Cart sidebar styling */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1001; /*Ensures the cart appears over the header */
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+/* Value proposition section with solid color container */
+#value-proposition {
+    display: flex; /* Establishes a flex container */
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    height: 125vh; /* Sets the height of the section to the full viewport height */
+    padding: 40px 0; /* Retains padding for visual spacing, adjust as necessary */
+    text-align: center;
+}
+
+#value-proposition .container {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    /* Removed margin here as flexbox handles centering */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* width is controlled by max-width and padding */
+}
+
+
+#value-proposition h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#value-proposition p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.learn-more-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3;
+}
+
+#mission-statement .container {
+    background: url('photos/digital-fortress-image.png') no-repeat center center; /* Adjust path */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 15px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds depth */
+    position: relative;
+    overflow: hidden; /* Ensures nothing spills outside the border-radius */
+}
+
+.mission-content {
+    max-width: 800px; /* Adjust based on your design */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent overlay for better readability */
+    color: #ffffff; /* Ensures text stands out */
+    padding: 40px;
+    border-radius: 10px; /* Softens the edges */
+}
+
+#mission-statement q {
+    font-style: italic;
+    font-size: 24px; /* Adjust size for emphasis */
+    color: #57a3ff; /* A color that stands out, adjust based on your palette */
+}
+
+#cta .container {
+    background: url('photos/background2.png') no-repeat center center; /* Adjust path */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 15px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds depth */
+    position: relative;
+    overflow: hidden; /* Ensures nothing spills outside the border-radius */
+}
+
+.cta-content {
+    max-width: 800px; /* Adjust based on your design */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent overlay for better readability */
+    color: #ffffff; /* Ensures text stands out */
+    padding: 40px;
+    border-radius: 10px; /* Softens the edges */
+}
+
+#cta q {
+    font-style: italic;
+    font-size: 24px; /* Adjust size for emphasis */
+    color: #57a3ff; /* A color that stands out, adjust based on your palette */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #company-logo, header h1 {
+        margin-bottom: 10px;
+    }
+
+    .left-header, nav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #cart-button {
+        margin-left: auto; /* Keeps the button aligned to the right */
+        margin-top: 10px; /* Adds a bit of space above the button in smaller screens */
+    }
+
+    #value-proposition .container {
+        padding: 20px;
+        max-width: 90%; /* More fluid on smaller screens */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+    }
+    .story-image, .text-container {
+        max-width: 100%; /* Allows image and text container to take full width */
+    }
+    .security-card {
+        flex-direction: column; /* Stack image and info on smaller screens */
+        width: 90%; /* Adjust for smaller screens */
+    }
+
+    .security-image {
+        width: 100%; /* Full width on smaller screens */
+    }
+    .flip-card {
+        width: 100%; /* Makes the card full width on smaller screens */
+        height: auto; /* Adjusts height dynamically based on content */
+      }
+    
+      .flip-card-inner {
+        flex-direction: column; /* Stacks front and back on top of each other */
+      }
+}
+
+/* The flip card container - set the width and height */
+.security-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line as needed */
+    justify-content: space-around; /* Spreads cards evenly with space around them */
+    gap: 20px; /* Optional: Adds space between cards */
+  }
+  
+  .flip-card {
+    flex: 0 1 calc(33.333% - 20px); /* Sets the card to take up 1/3 of the container width, adjusting for gap */
+    /* Adjust the percentage based on how many cards you want per row. E.g., for 4 cards, use 25%. */
+    height: 300px; /* Or your preferred height */
+    perspective: 1000px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when facing away */
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    text-align: left;
+    font-size: 16px;
+    padding: 16px;
+    width: 340px; /* Adjust width as necessary */
+    height: 270px; /* Adjust height as necessary */
+}
+
+.flip-card-back h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+  
+  /* Flip the inner card on hover - remove if using JavaScript to trigger flip */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  @media (max-width: 768px) {
+    .flip-card {
+      flex: 0 1 calc(50% - 20px); /* On smaller screens, display 2 cards per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flip-card {
+      flex: 0 1 100%; /* On very small screens, display cards in a single column */
+    }
+  }
+  
+
+#our-story .flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the items horizontally */
+    font-size: 17px;
+    gap: 20px; /* Adds space between the image and the text container */
+    flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+}
+
+.story-image {
+    flex: 1; /* Allows the image to grow and shrink as needed */
+    max-width: 50%; /* Limits the image width to half of the container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.text-container {
+    flex: 1; /* Allows the text container to grow and shrink as needed */
+    max-width: 50%; /* Limits the text container width to half of the container */
+    background-color: #f0f0f0; /* Light grey background for the text container */
+    padding: 20px; /* Adds padding inside the text container */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+#security-quiz {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answer {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer:hover {
+    background-color: #0056b3;
+}
+
+button.prev, button.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+button.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #333;
+}
+
+.contact-container {
+    text-align: center; /* Centers the content horizontally */
+    padding: 20px; /* Provides some spacing around the content */
+}
+
+.contact-button {
+    display: inline-block; /* Allows block-level properties (like padding) but keeps element in-line */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Removes underline from link */
+    font-weight: bold; /* Makes the font bold */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-button:hover {
+    background-color: #0056b3; /* Darker shade on hover for a subtle effect */
+}
+
+#services-intro, #services-cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.service {
+    width: 45%; /* Adjust based on your layout preference */
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cta-button {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #003d7a;
+}
+
+#security-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.security-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 10px;
+    overflow: hidden; /* Ensures the content fits within the borders */
+    width: 45%; /* Adjust based on your layout preference */
+}
+
+.security-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the div without being stretched */
+}
+
+.security-info {
+    padding: 20px;
+}
+
+.security-info h3 {
+    margin-top: 0;
+}
+
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 30%; /* Adjust based on how many products per row you desire */
+    margin: 15px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+#contact-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for the form area */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact-section input[type="text"],
+#contact-section input[type="email"],
+#contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-section button[type="submit"] {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-section button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Additional styling to match the rest of your website */
+
+
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center-align the content */
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px;
+}
+
+footer a.social-icon {
+    color: #fff; /* White link color */
+    margin: 0 10px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 20px; /* Adjust the size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a.social-icon:hover {
+    color: #007bff; /* Color change on hover */
+}
+
+footer p {
+    color: #ccc; /* Lighter text color for contrast and hierarchy */
+    margin-top: 20px; /* Spacing from social icons */
+    font-size: 14px; /* Smaller font size */
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1, h2 {
+    color: #007bff; /* Brand color for headings */
+}
+
+p, li {
+    line-height: 1.6; /* Improved readability */
+}
+
+
+

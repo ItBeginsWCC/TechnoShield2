@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechShield Security Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="photos/logo.png" alt="Company Logo" id="company-logo">
+        <h1>TechShield Security Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="cart-button">Cart</button>
+
+    </header>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button id="close-cart-btn">X</button>
+        <!-- Cart items will be dynamically inserted here -->
+        <p>Your Cart is empty.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main>
+       
+
+        <section id="our-story">
+            <div class="container flex-container">
+                <img src="photos/beginning.png" alt="Our Beginnings" class="story-image">
+                <div class="text-container">
+                    <h2>Our Story</h2>
+                    <p>Our journey at TechnShield Security Solutions began with a passion for redefining security for homes and businesses. 
+                        Through relentless innovation, we've crafted cutting-edge surveillance cameras delivering unparalleled clarity and 
+                        coverage. Our commitment to customer satisfaction has led us to expand into robust cybersecurity services, ensuring 
+                        comprehensive protection against digital threats. With personalized solutions and unwavering dedication, we empower 
+                        our customers to take control of their security with confidence. Join us and experience peace of mind like never before.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="mission-statement">
+            <div class="container">
+                <div class="mission-content">
+                    <q>Empowering homes and businesses with cutting-edge surveillance and cybersecurity solutions, safeguarding what matters most.</q>
+                </div>
+            </div>
+        </section>
+
+        <h2>How Safe is your Home or Business.  Take the quiz below!</h2>
+
+        <div id="security-quiz">
+            <div class="question" id="question1">
+                <p>Do you have a working security camera system installed?</p>
+                <button class="answer" data-next="question2" data-score="20">Yes</button>
+                <button class="answer" data-next="question2" data-score="0">No</button>
+            </div>
+            <div class="question" id="question2">
+                <p>Is the alarm system monitored by a professional security company?</p>
+                <button class="answer" data-next="question3" data-score="20">Yes</button>
+                <button class="answer" data-next="question3" data-score="0">No</button>
+            </div>
+            <div class="question" id="question3">
+                <p>Does the alarm system include sensors for doors, windows, and motion detection?</p>
+                <button class="answer" data-next="question4" data-score="20">Yes</button>
+                <button class="answer" data-next="question4" data-score="0">No</button>
+            </div>
+            <div class="question" id="question4">
+                <p>Do you check for updates on a regular schedule for devices that don't support automatic updates?</p>
+                <button class="answer" data-next="question5" data-score="20">Yes</button>
+                <button class="answer" data-next="question5" data-score="0">No</button>
+            </div>
+            <div class="question" id="question5">
+                <p>Do you use multi-factor authentication (MFA) for added security?</p>
+                <button class="answer" data-next="result" data-score="20">Yes</button>
+                <button class="answer" data-next="result" data-score="0">No</button>
+            </div>
+            <!-- Additional questions here -->
+            <div class="result" id="result" style="display:none;">
+                <p>Your security score is: <span id="totalScore"></span>/100</p>
+                <p id="securityAdvice"></p>
+            </div>
+        </div>
+        
+        <section id="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Get In Touch</h2>
+                    <p>Feel free to reach out with any inquiries or feedback – we're here to help!</p>
+                    <div class="contact-container">
+                        <a href="contact.html" class="contact-button">Contact Me</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/yourchannel" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    
+            <!-- Copyright Notice -->
+            <p>&copy; <span id="current-year"></span> TechShield Security Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
